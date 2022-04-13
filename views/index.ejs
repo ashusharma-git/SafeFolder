@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPFS upload | SafeFolder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <% if(page=="upload") {%> 
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>SafeFolder</h2>
+                    <P>Upload files to IPFS</P>
+                    <form action="/" id="upload-form" method="POST" enctype="multipart/form-data">
+                        <div class="input-control">
+                            <input type="file" name="file" class="input-box upload-box">
+                        </div>
+                        <button type="submit" class="submit-btn">Upload now</button>
+                    </form>                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %> 
+    <% if(page=="viewQR") {%> 
+        <div class="container">
+            <div class="card">
+                <center>
+                    <img src="<%=qr%>" width="350">
+                    <br><h4 class="msg">scan this QR  <br> or <a href="<%=hash%>" >click here</a> to view your file on IPFS</h4>
+                </center>
+            </div>
+        </div>
+        <% } %> 
+</body>
+</html>
+
+<!-- `<center><img src=${qr} width="300"><br>scan this QR  <br> or <a href="https://ipfs.io/ipfs/${result[0].hash}" >Click here</a> to view your file on ipfs<center>`
+ -->

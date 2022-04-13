@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.msg {
+  font-family: sans-serif;
+  color: rgba(3, 3, 66, 0.801);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  background: rgb(187, 187, 245);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 350px;
+  height: 400px;
+  box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.26);
+  perspective: 1000px;
+}
+.inner-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 100, 0.8), rgba(0, 0, 100, 0.8)),
+    url(bg.jpg);
+  padding: 55px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+.card h2 {
+  font-weight: normal;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card p {
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.input-box {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #fff;
+  margin: 2px 0;
+  height: 32px;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  text-align: center;
+  color: #fff;
+}
+::placeholder {
+  color: rgb(204, 175, 175);
+  font-size: 12px;
+}
+button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #fff;
+  margin: 35px 0 10px;
+  height: 32px;
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+.submit-btn {
+  position: relative;
+}
+.submit-btn::after {
+  content: "\27a4";
+  color: #333;
+  line-height: 32px;
+  font-size: 17px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+}
+.card .btn {
+  margin-top: 70px;
+}
+.input-control.success input {
+  border-color: #09c372;
+}
+.input-control.error input {
+  border-color: #ff3860;
+}
+.input-control .error {
+  color: #ff3860;
+  font-size: 10px;
+  height: 13px;
+}
+
+::-webkit-file-upload-button {
+  background: rgba(255, 255, 255, 0.932);
+  margin: 2px;
+  padding: 5px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+}
